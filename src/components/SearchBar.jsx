@@ -1,7 +1,8 @@
 //import useState, useNavigate
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Paper, IconButton } from '@mui/material';
+import Paper from '@mui/material/Paper';
+import { IconButton } from '@mui/material';
 import { Search } from '@mui/icons-material';
 
 
