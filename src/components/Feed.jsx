@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
+import Sidebar from './Sidebar';
 
 const Feed = () => {
   return (
@@ -11,7 +12,8 @@ const Feed = () => {
          <Typography className='copyright'
            variant="body2" sx={{ mt: 1.5,
            color: '#fff'}}
-         >
+          >
+          <Sidebar />
            Copyright BillyroseCodes 2022
          </Typography>
       </Box>
