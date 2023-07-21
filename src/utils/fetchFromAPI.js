@@ -1,22 +1,17 @@
 //utility function for fetching Api data
 import axios from 'axios';
 
+const BASE_URL = 'https://youtube-v31.p.rapidapi.com/captions';
+
 const options = {
-    method: 'GET',
-    url: 'https://youtube-v31.p.rapidapi.com/captions',
+    url: BASE_URL,
     params: {
-      part: 'snippet',
-      videoId: 'M7FIvfx5J10'
+     maxResult: '50'
     },
     headers: {
-      'X-RapidAPI-Key': '6743a75df6msheab0be8bf6b932bp150271jsnf328d2148e8b',
+      'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
       'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     }
   };
   
-  try {
-      const response = await axios.request(options);
-      console.log(response.data);
-  } catch (error) {
-      console.error(error);
-  }
+  
