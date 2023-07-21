@@ -8,7 +8,7 @@ const ChannelCard = ({ channelDetail }) => (
     <Box sx={{ boxShadow: 'none', borderRadius: '20px',
        display: 'flex', justifyContent: 'center',
        alignItems: 'center', width: { xs: '365px', md: '320px'},
-       height: '326px', margin: 'auto'
+       height: '326px', margin: 'auto', marginTop: '-93px'
       }}>
        <Link to={`/channel/${channelDetail?.id?.channelId}`}>
            <CardContent sx={{ display: 'flex', flexDirection:
