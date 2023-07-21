@@ -34,7 +34,10 @@ const Feed = () => {
         <Typography variant="h4"
         fontWeight="bold" mb={2} sx={{
           color: 'white' }}>
-            New <span style={{ color: '#F31503'}}>videos</span>
+          
+  {/* implement the category selected to be displayed on the field */}
+           {selectedCategory}<span style={{ color: '#F31503'}}>videos</span>
+
         </Typography>
 
         <Videos videos={[]} />
