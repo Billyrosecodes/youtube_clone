@@ -4,6 +4,8 @@ import { VideoCard, ChannelCard } from './';
 
 //destructure props and get videos
 const Videos = ({ videos, direction }) => {
+  if(!videos?.length) return "Loading...";
+
   return (
     <Stack direction= {direction || "row"} flexWrap="wrap" //layout the info we want to display
      justifyContent="start" gap={2}>
