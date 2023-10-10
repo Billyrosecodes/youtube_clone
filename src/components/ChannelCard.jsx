@@ -8,7 +8,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
     <Box sx={{ boxShadow: 'none', borderRadius: '20px',
        display: 'flex', justifyContent: 'center',
        alignItems: 'center', width: { xs: '365px', md: '320px'},
-       height: '326px', margin: 'auto', marginTop,
+       height: '326px', margin: 'auto'
       }}>
        <Link to={`/channel/${channelDetail?.id?.channelId}`}>
            <CardContent sx={{ display: 'flex', flexDirection:
@@ -27,7 +27,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
               </Typography>
                {channelDetail?.statistics?.subscriberCount && (
                 <Typography>
-                  {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()}
+                  {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
                 </Typography>
                )}
            </CardContent>
