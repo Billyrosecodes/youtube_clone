@@ -21,8 +21,7 @@ const ChannelDetail = () => {
     );
         //get the videos
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`).then(
-      (data) => setVideos(data?.items[0]) //select the first item with its index
-    );
+      (data) => setVideos(data?.items));
   }, [id]); // id is the parameter passed into the useEffect
   return (
     <Box minHeight="95vh">
