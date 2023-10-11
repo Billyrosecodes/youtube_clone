@@ -7,14 +7,12 @@ import { demoThumbnailUrl, demoVideoUrl,
          demoChannelTitle } from '../utils/constants';
 
          //destructure the object gotten from the api
-const VideoCard = ({ video: { id: { videoId }, snippet }}) => {
-   
-  return (
+const VideoCard = ({ video: { id: { videoId }, snippet }}) => (
    <Card sx={{ width: { xs: '100%', sm: '358px', md: '320px' },
    boxShadow: 'none', borderRadius: 0 }}>
     <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia 
-          image={snippet?.thumbnails?.high?.url}
+          image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
           alt={snippet?.title}
           sx={{ width: {
             xs: '100%', sm: '358px', md: '320px'
@@ -31,12 +29,11 @@ const VideoCard = ({ video: { id: { videoId }, snippet }}) => {
      <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl}>
        <Typography variant="subtitle2" fontWeight="bold" color="gray">
         {snippet?.channelTitle || demoChannelTitle}
-        <CheckCircle sx={{ fontSize: 12, color: 'gray', ml: "5px" }}/>
+        <CheckCircle sx={{ fontSize: "12px", color: 'gray', ml: "5px" }}/>
        </Typography>
      </Link>
     </CardContent>
    </Card>
   )
-}
 
 export default VideoCard
