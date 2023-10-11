@@ -14,7 +14,8 @@ import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 
-export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';  //import logo
+import logo from "../assets/images/youtubeicon.png";
+export {logo};  //import logo
 
 
 //export the array categories containing the key value pairs
