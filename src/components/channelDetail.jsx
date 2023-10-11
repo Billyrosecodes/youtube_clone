@@ -12,7 +12,7 @@ const ChannelDetail = () => {
   const [videos, setVideos] = useState([]);
 
   const { id } = useParams();
-  console.log(channelDetail, videos);
+  // console.log(channelDetail, videos);
 
   useEffect(() => { 
      //get the channel detail

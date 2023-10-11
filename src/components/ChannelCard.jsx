@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 
 import { demoProfilePicture } from '../utils/constants';
 
-const ChannelCard = ({ channelDetail, marginTop }) => (
+const ChannelCard = ({ channelDetail, marginTop }) => (  //pass out mt so it can be used elsewhere
     <Box sx={{ boxShadow: 'none', borderRadius: '20px',
        display: 'flex', justifyContent: 'center',
        alignItems: 'center', width: { xs: '365px', md: '320px'},
-       height: '326px', margin: 'auto'
+       height: '326px', margin: 'auto', marginTop,
       }}>
        <Link to={`/channel/${channelDetail?.id?.channelId}`}>
            <CardContent sx={{ display: 'flex', flexDirection:
