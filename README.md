@@ -9,6 +9,9 @@ click the link to view live deployment
 https://euphonious-caramel-9d7864.netlify.app
 
 
+Issues to fix includes the responsiveness and improving the ui
+
+
 
 
 
