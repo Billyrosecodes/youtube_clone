@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { demoProfilePicture } from '../utils/constants';
 
-const ChannelCard = ({ channelDetail, marginTop }) => (
+const ChannelCard = ({ channelDetail, marginTop }) => (  //pass out mt so it can be used elsewhere
     <Box sx={{ boxShadow: 'none', borderRadius: '20px',
        display: 'flex', justifyContent: 'center',
        alignItems: 'center', width: { xs: '365px', md: '320px'},
@@ -27,7 +27,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
               </Typography>
                {channelDetail?.statistics?.subscriberCount && (
                 <Typography>
-                  {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()}
+                  {parseInt(channelDetail?.statistics?.subscriberCount).toLocaleString()} Subscribers
                 </Typography>
                )}
            </CardContent>

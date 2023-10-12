@@ -2,25 +2,27 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Box } from "@mui/material";
 
+//import videos and card from this current dir
 import { Videos, ChannelCard } from "./";
+// import function that outputs api results
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
-const ChannelDetail = () => {
+const ChannelDetail = () => {  
   const [channelDetail, setChannelDetail] = useState(null);
   const [videos, setVideos] = useState([]);
 
   const { id } = useParams();
-  console.log(channelDetail, videos);
+  // console.log(channelDetail, videos);
 
-  useEffect(() => {
+  useEffect(() => { 
+     //get the channel detail
     fetchFromAPI(`channels?part=snippet&id=${id}`).then((data) =>
-      setChannelDetail(data?.items[0])
+      setChannelDetail(data?.items[0]) //select the first item with its index
     );
-
+        //get the videos
     fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`).then(
-      (data) => setVideos(data?.items[0])
-    );
-  }, [id]);
+      (data) => setVideos(data?.items));
+  }, [id]); // id is the parameter passed into the useEffect
   return (
     <Box minHeight="95vh">
       <Box>

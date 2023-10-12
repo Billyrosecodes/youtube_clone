@@ -1,4 +1,4 @@
-// export components
+// export components to be used where needed
 export { default as Navbar } from './Navbar';
 export { default as Feed } from './Feed';
 export { default as SearchFeed } from './SearchFeed';
